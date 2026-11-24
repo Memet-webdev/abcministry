@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#F6F4F0" />
+  <link rel="icon" type="image/png" href="logoministry-transparent.png" />
+  <title>Melayani Bersama — ABC MINISTRY</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['"Plus Jakarta Sans"', 'sans-serif'],
+          },
+          colors: {
+            paper: '#F6F4F0',
+            ink: '#10131A',
+            accent: '#0055FF',
+            blush: '#F58AD4',
+            coral: '#FF2E63',
+          },
+        },
+      },
+    };
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+  <style>
+    svg.lucide { stroke-width: 1.5; }
+  </style>
+</head>
+
+<body class="min-h-screen bg-paper font-sans text-ink antialiased selection:bg-accent/20">
+  <noscript><style>#welcome-screen { display: none !important; }</style></noscript>
+
+  <!-- Splash mengikuti tema terang: logo transparan diwarna ink -->
+  <div
+    id="welcome-screen"
+    role="status"
+    aria-live="polite"
+    aria-label="Mempersiapkan halaman pendaftaran pelayanan"
+    class="fixed inset-0 z-50 flex flex-col items-center justify-center bg-paper px-8 transition-opacity duration-300 ease-out"
+  >
+    <div class="w-full max-w-[240px] text-center">
+      <img src="logoministry-transparent.png" alt="Logo ABC MINISTRY" class="mx-auto h-20 w-20 object-contain brightness-0" draggable="false" />
+      <div class="mx-auto mt-5 h-[2px] w-8 rounded-full bg-gradient-to-r from-blush to-coral"></div>
+      <p class="mt-4 font-display text-sm font-semibold uppercase tracking-[0.25em] text-ink">ABC MINISTRY</p>
+      <p class="mt-2 text-xs text-ink/45">Selamat datang di ABC MINISTRY</p>
+      <div class="mt-10 h-[2px] w-full overflow-hidden rounded-full bg-ink/10">
+        <div id="welcome-progress" class="h-full w-0 rounded-full bg-accent"></div>
+      </div>
+      <p id="welcome-percent" class="mt-3 text-[11px] tabular-nums text-ink/40">0%</p>
+    </div>
+  </div>
+
+  <header class="sticky top-0 z-40 border-b border-ink/10 bg-paper/90 backdrop-blur-sm">
+    <nav class="mx-auto flex w-full max-w-md items-center justify-between px-5 py-4 sm:max-w-2xl sm:px-8" aria-label="Navigasi utama">
+      <a href="#top" class="flex items-center gap-2.5 rounded-sm focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper">
+        <img src="logoministry-transparent.png" alt="" class="h-7 w-7 object-contain brightness-0" draggable="false" />
+        <span class="font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-ink">ABC MINISTRY</span>
+      </a>
+      <a href="#daftar-pelayanan" class="rounded-sm text-[11px] font-medium text-ink/60 transition-colors duration-200 hover:text-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper">Pilih Pelayanan</a>
+    </nav>
+  </header>
+
+  <main id="top" class="mx-auto w-full max-w-md px-5 pb-10 pt-12 sm:max-w-2xl sm:px-8 sm:pb-14 sm:pt-16">
+    <header>
+      <div class="flex items-center gap-3">
+        <span class="h-[2px] w-8 rounded-full bg-gradient-to-r from-blush to-coral"></span>
+        <span class="text-[10px] font-semibold uppercase tracking-[0.2em] text-ink/45">Welcome</span>
+      </div>
+      <h1 class="mt-5 font-display text-4xl font-semibold leading-[1.05] tracking-[-0.035em] text-ink sm:text-5xl">
+        Mari Melayani<br />Bersama.
+      </h1>
+      <p class="mt-5 max-w-lg text-sm leading-relaxed text-ink/60 sm:text-base">
+        Tuhan memakai setiap talenta untuk menjadi berkat bagi sesama. Yuk, ambil bagian dalam pelayanan ini dan mari kita wujudkan kasih-Nya melalui tindakan nyata.
+      </p>
+      <blockquote class="mt-8 border-l-2 border-accent pl-4 sm:pl-5">
+        <p class="font-display text-sm leading-relaxed text-ink/75 sm:text-[15px]">
+          Sebab Anak Manusia juga datang bukan untuk dilayani, melainkan untuk melayani dan untuk memberikan nyawa-Nya menjadi tebusan bagi banyak orang.
+        </p>
+        <cite class="mt-2 block text-[10px] font-semibold uppercase not-italic tracking-[0.16em] text-ink/45">Markus 10:45</cite>
+      </blockquote>
+    </header>
+
+    <section aria-labelledby="daftar-pelayanan" class="mt-12 sm:mt-14">
+      <div class="flex items-baseline justify-between border-b border-ink/10 pb-3">
+        <h2 id="daftar-pelayanan" class="scroll-mt-24 font-display text-[11px] font-semibold uppercase tracking-[0.18em] text-ink/60">Daftar Pelayanan</h2>
+        <span class="text-[10px] tabular-nums tracking-[0.12em] text-ink/40">07 PILIHAN</span>
+      </div>
+      <div id="ministry-list" class="grid grid-cols-1 gap-x-10 sm:grid-cols-2"></div>
+    </section>
+
+    <footer class="mt-14 flex flex-wrap items-center justify-between gap-2 border-t border-ink/10 pt-6 text-[11px] text-ink/50">
+      <span>&copy; ABC MINISTRY</span>
+      <a
+        id="contact-link"
+        href="#"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="text-ink/60 underline decoration-ink/20 underline-offset-4 transition-colors duration-200 hover:text-accent hover:decoration-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper"
+      >Hubungi koordinator via WhatsApp</a>
+    </footer>
+  </main>
+
+  <script>
+    // Ubah nilai di sini saja untuk menyesuaikan tujuan pendaftaran.
+    const CONFIG = {
+      formBaseUrl: "https://docs.google.com/forms/d/e/1FAIpQLSdh7JW_i-l1xZ_6lDFFYJhpbqC9_u_5pJQlHLpYGd0TuWlN5w/viewform",
+      entryId: "entry.232304771",
+
+      // TODO: ganti 62XXXXXXXXXX dengan nomor WhatsApp koordinator
+      // (format internasional tanpa + / spasi / tanda baca), mis. 6281234567890
+      contactUrl: "https://wa.me/62XXXXXXXXXX?text=Halo%20ABC%20MINISTRY%2C%20saya%20butuh%20bantuan%20pendaftaran%20pelayanan.",
+
+      ministries: [
+        { name: "PAW (Praise & Worship)", icon: "music-2",        gformValue: "PAW",             desc: "Worship Leader, Singer, dan Pemusik" },
+        { name: "Usher",                 icon: "door-open",       gformValue: "Usher",           desc: "Menyambut jemaat dan ketertiban ibadah" },
+        { name: "Event Organizer",       icon: "calendar-days",   gformValue: "Event Organizer", desc: "Konsep, persiapan, dan koordinasi acara" },
+        { name: "Lighting",              icon: "lightbulb",       gformValue: "Lighting",        desc: "Pengaturan tata cahaya panggung dan ibadah" },
+        { name: "Sound System",          icon: "volume-2",        gformValue: "Sound System",    desc: "Mixing audio dan operasional perangkat suara" },
+        { name: "Multimedia",            icon: "monitor-play",    gformValue: "Multimedia",      desc: "Operator LCD, kamera, livestream, dan visual" },
+        { name: "PKS",                   icon: "heart-handshake", gformValue: "PKS",             desc: "Koordinasi dan pelayanan tim PKS" },
+      ],
+    };
+
+    function buildFormUrl(value) {
+      const params = new URLSearchParams({ usp: "pp_url", [CONFIG.entryId]: value });
+      return `${CONFIG.formBaseUrl}?${params.toString()}`;
+    }
+
+    function escapeHtml(value) {
+      return value.replace(/[&<>"']/g, (char) => ({
+        "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
+      })[char]);
+    }
+
+    function renderMinistries() {
+      const list = document.getElementById("ministry-list");
+
+      list.innerHTML = CONFIG.ministries.map((m, index) => {
+        const span = index === CONFIG.ministries.length - 1 ? " sm:col-span-2" : "";
+        const number = String(index + 1).padStart(2, "0");
+        return `
+          <a
+            href="${escapeHtml(buildFormUrl(m.gformValue))}"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="group flex items-center gap-4 border-b border-ink/10 py-5 transition-colors duration-200 hover:border-accent focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-accent focus-visible:ring-offset-2 focus-visible:ring-offset-paper${span}"
+          >
+            <span class="w-5 shrink-0 font-display text-[11px] font-semibold tabular-nums text-ink/35 transition-colors duration-200 group-hover:text-accent">${number}</span>
+            <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full border border-ink/15 text-ink/70 transition-colors duration-200 group-hover:border-accent group-hover:text-accent">
+              <i data-lucide="${m.icon}" class="h-4 w-4"></i>
+            </span>
+            <span class="min-w-0 flex-1">
+              <span class="block truncate font-display text-[15px] font-semibold tracking-tight text-ink">${escapeHtml(m.name)}</span>
+              <span class="mt-1 block truncate text-xs text-ink/55">${escapeHtml(m.desc)}</span>
+            </span>
+            <i data-lucide="arrow-up-right" class="h-4 w-4 shrink-0 text-ink/35 transition-transform duration-200 group-hover:translate-x-[3px] group-hover:text-accent"></i>
+          </a>`;
+      }).join("");
+
+      document.getElementById("contact-link").href = CONFIG.contactUrl;
+    }
+
+    function startWelcome() {
+      const splash = document.getElementById("welcome-screen");
+      const bar = document.getElementById("welcome-progress");
+      const label = document.getElementById("welcome-percent");
+      const duration = 2000;
+
+      document.body.classList.add("overflow-hidden");
+
+      function finish() {
+        splash.classList.add("opacity-0");
+        document.body.classList.remove("overflow-hidden");
+        splash.addEventListener("transitionend", () => splash.remove(), { once: true });
+        setTimeout(() => splash.remove(), 500);
+      }
+
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+        bar.style.width = "100%";
+        label.textContent = "100%";
+        finish();
+        return;
+      }
+
+      const start = performance.now();
+      function tick(now) {
+        const t = Math.min((now - start) / duration, 1);
+        const eased = t < 0.5 ? 2 * t * t : 1 - Math.pow(-2 * t + 2, 2) / 2;
+        const percent = Math.round(eased * 100);
+        bar.style.width = percent + "%";
+        label.textContent = percent + "%";
+        if (t < 1) requestAnimationFrame(tick);
+        else setTimeout(finish, 180);
+      }
+      requestAnimationFrame(tick);
+    }
+
+    document.addEventListener("DOMContentLoaded", () => {
+      renderMinistries();
+      if (window.lucide) lucide.createIcons();
+      startWelcome();
+    });
+  </script>
+</body>
+</html>
